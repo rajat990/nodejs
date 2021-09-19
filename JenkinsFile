@@ -1,6 +1,10 @@
 pipeline {
     agent any
-
+environment {
+    registry = "rajat2509/nodejs"
+    registryCredential = 'rajat2509'
+    dockerImage = ''
+}
     stages {
         stage('Hello') {
             steps {
@@ -9,5 +13,27 @@ pipeline {
                 dockerFingerprintFrom dockerfile: 'dockerfile', image: 'hello-world'
             }
         }
+           stage('Building image') {
+      steps{
+        script {
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+        }
+      }
+    }
+    stage('Deploy Image') {
+      steps{
+        script {
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+          }
+        }
+      }
+    }
+    stage('Remove Unused docker image') {
+      steps{
+        sh "docker rmi $registry:$BUILD_NUMBER"
+      }
+    }
+    
     }
 }
