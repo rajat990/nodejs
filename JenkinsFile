@@ -10,7 +10,7 @@ environment {
             steps {
                 echo 'Hello World'
                 git changelog: false, credentialsId: '16af19b6-6f65-44c1-972b-35c39e99b238', poll: false, url: 'https://github.com/rajat990/nodejs.git'
-                dockerFingerprintFrom dockerfile: 'dockerfile', image: 'hello-world'
+                
             }
         }
            stage('Building image') {
