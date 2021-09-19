@@ -2,7 +2,7 @@ pipeline {
     agent any
 environment {
     registry = "rajat2509/nodejs"
-    registryCredential = 'dockerRajat2509'
+    registryCredential = 'dockerRajat990'
     dockerImage = ''
 }
     stages {
