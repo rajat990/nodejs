@@ -1,0 +1,16 @@
+version: '3'
+services:
+    mongo:
+      image: mongo
+      ports:
+        - "27017:27017"
+    node:
+      build: .
+      ports:
+        - "9000:9000"
+      # environment:
+      #   DB_HOST: mongo
+      #   DB_PORT: 27017
+      #   DB_COLLECTION_NAME: test1
+      env_file: .env
+        
