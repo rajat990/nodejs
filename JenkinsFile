@@ -30,7 +30,7 @@ environment {
         }
       }
     }
-    stage('Remove Unused docker image') {
+    stage(' docker compose') {
       steps{
         sh "docker-compose docker-compose.yml up -d"
       }
