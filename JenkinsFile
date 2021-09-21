@@ -26,8 +26,14 @@ environment {
         script {
           docker.withRegistry( '', registryCredential ) {
             dockerImage.push()
+           
           }
         }
+      }
+    }
+        stage('remove docker images') {
+      steps{
+       bat "docker rmi -f $(docker images -a -q)"
       }
     }
     stage(' docker compose') {
