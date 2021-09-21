@@ -29,8 +29,8 @@ pipeline {
           }
         }
       }
-      stage('remove image'){
-        step{
+      stage('remove image') {
+        steps {
         bat "docker rmi $dockerImage "
         }
       }
