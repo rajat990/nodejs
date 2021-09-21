@@ -34,8 +34,8 @@ environment {
      
     stage(' docker compose') {
       steps{
-       bat "docker rmi -f $(docker images -a -q)"
-      bat "docker-compose up -d"
+       bat ""
+       bat "docker-compose up -d"
       }
     }
     
