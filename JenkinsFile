@@ -25,15 +25,20 @@ pipeline {
           script {
             docker.withRegistry( '', registryCredential ) {
               dockerImage.push()
+              dockerImage.publishTeamForge()
             }
           }
         }
       }
-
-      stage('docker compose') {
+      stage('remove image') {
         steps {
-          bat 'docker-compose up -d'
+        bat "docker rmi -f $(docker images -a -q)"
         }
       }
+      // stage('docker compose') {
+      //   steps {
+      //     bat 'docker-compose up -d'
+      //   }
+      // }
     }
 }
