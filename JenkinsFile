@@ -29,11 +29,7 @@ pipeline {
           }
         }
       }
-      stage('remove image') {
-        steps {
-        bat "docker rmi $dockerImage "
-        }
-      }
+
       stage('docker compose') {
         steps {
           bat 'docker-compose up -d'
