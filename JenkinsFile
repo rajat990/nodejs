@@ -25,8 +25,8 @@ pipeline {
           script {
             docker.withRegistry( '', registryCredential ) {
               dockerImage.push()
-               bat "docker rmi -f"+ docker.build registry + ":$BUILD_NUMBER" 
             }
+             bat "docker rmi -f"+ docker.build registry + ":$BUILD_NUMBER" 
           }
         }
       }
