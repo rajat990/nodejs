@@ -14,7 +14,7 @@ from selenium.webdriver.chrome.service import Service
 import config
 
 BROWSER_WAIT = 10
-s=Service("C:\driver\chromedriver.exe")
+s=Service("C:/driver/chromedriver.exe")
 @pytest.fixture(scope="session")
 def login_chatbot():
     user_data = config.read_ini()
