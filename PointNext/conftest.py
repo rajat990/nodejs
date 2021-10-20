@@ -24,7 +24,7 @@ def login_chatbot():
     options.add_argument("test-type");
     options.add_argument("--ignore-certificate-errors");
     options.add_argument("no-sandbox");
-    web_driver = webdriver.Chrome(service=s, options=options)
+    web_driver = webdriver.Chrome( options=options)
     web_driver.implicitly_wait(BROWSER_WAIT)
     web_driver.delete_all_cookies()
     web_driver.maximize_window()
