@@ -15,6 +15,7 @@ pipeline {
       stage('Building image') {
         steps {
           dir("PointNext") {
+          bat 'venv/Scripts/activate'
           bat 'python test_first_example.py'
         }
         }
