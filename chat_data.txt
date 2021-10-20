@@ -1,0 +1,16 @@
+Bot: > You can type something like 'I have a power supply issue' in the chat. Alternatively, select one of the options below.
+User: Buttons > Case Status, Coverage Check, Firmware, Troubleshoot
+User: Clicks On > Case Status
+Bot: > Sure, I can look up a case status. Please provide the case number that you're inquiring about.
+User: > 5359403112
+Bot: > What country is your asset located in?
+User: > USA
+Bot: > Okay, lets identify your asset. You will need either
+Bot: > Your asset's Serial Number
+Bot: > Your asset's Product Number and Service Agreement ID
+User: Buttons > Enter a Product Number and Service Agreement ID, Enter a Serial Number
+User: Clicks On > Enter a Serial Number
+Bot: > Please enter your asset's Serial Number.
+User: > CZJ6454J4J
+Bot: > CASE STATUS: 
+Exit
