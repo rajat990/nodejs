@@ -9,7 +9,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from logUtil import logger
-from selenium.web_driver.chrome.service import Service
+from selenium.webdriver.chrome.service import Service
+
 import config
 
 BROWSER_WAIT = 10
@@ -23,7 +24,7 @@ def login_chatbot():
     options.add_argument("test-type");
     options.add_argument("--ignore-certificate-errors");
     options.add_argument("no-sandbox");
-    web_driver = webdriver.Chrome(service=s, options=options)
+    web_driver = webdriver.Chrome( options=options)
     web_driver.implicitly_wait(BROWSER_WAIT)
     web_driver.delete_all_cookies()
     web_driver.maximize_window()
