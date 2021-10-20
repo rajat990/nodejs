@@ -1,0 +1,33 @@
+Wed, 20 Oct 2021 10:51:52 INFO     
+++++++++++++ Testing Scenario 1 ++++++++++++
+Wed, 20 Oct 2021 10:51:52 INFO     
+
+Wed, 20 Oct 2021 10:51:52 INFO     ====== WebDriver manager ======
+Wed, 20 Oct 2021 10:51:52 INFO     Current google-chrome version is 94.0.4606
+Wed, 20 Oct 2021 10:51:52 INFO     Get LATEST driver version for 94.0.4606
+Wed, 20 Oct 2021 10:51:53 INFO     There is no [win32] chromedriver for browser 94.0.4606 in cache
+Wed, 20 Oct 2021 10:51:53 INFO     Get LATEST driver version for 94.0.4606
+Wed, 20 Oct 2021 10:51:53 INFO     Trying to download new driver from https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_win32.zip
+Wed, 20 Oct 2021 10:51:54 INFO     Driver has been saved in cache [C:\Users\sahil\.wdm\drivers\chromedriver\win32\94.0.4606.61]
+Wed, 20 Oct 2021 10:52:34 INFO     User already logged in
+Wed, 20 Oct 2021 10:52:34 INFO     Recorded Chat to be verified: 
+Bot: > You can type something like 'I have a power supply issue' in the chat. Alternatively, select one of the options below.
+User: Buttons > Case Status, Coverage Check, Firmware, Troubleshoot
+User: Clicks On > Case Status
+Bot: > Sure, I can look up a case status. Please provide the case number that you're inquiring about.
+User: > 5359403112
+Bot: > What country is your asset located in?
+User: > USA
+Bot: > Okay, lets identify your asset. You will need either
+Bot: > Your asset's Serial Number
+Bot: > Your asset's Product Number and Service Agreement ID
+User: Buttons > Enter a Product Number and Service Agreement ID, Enter a Serial Number
+User: Clicks On > Enter a Serial Number
+Bot: > Please enter your asset's Serial Number.
+User: > CZJ6454J4J
+Bot: > CASE STATUS: 
+Exit
+ 
+Wed, 20 Oct 2021 10:52:51 INFO     Text retrieved from Chatbot 'Hello Anirudh, how can I help you today?You can type something like 'I have a power supply issue' in the chat. Alternatively, select one of the options below.' 
+Wed, 20 Oct 2021 10:52:51 INFO     Buttons seen in the Chatbot '['Case Status', 'Coverage Check', 'Firmware', 'Troubleshoot']' 
+Wed, 20 Oct 2021 10:52:51 INFO     Link to be clicked 'Case Status'
