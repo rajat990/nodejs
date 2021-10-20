@@ -14,7 +14,7 @@ pipeline {
       }
       stage('Building image') {
         steps {
-          dir("folder") {
+          dir("PointNext") {
           bat 'python test_first_example.py'
         }
           script {
