@@ -16,7 +16,7 @@ pipeline {
         steps {
           dir("PointNext") {
              dir("./venv/Scripts/") {
-                bat 'activate'
+                bat 'activate.bat'
              }
           bat 'python test_first_example.py'
         }
